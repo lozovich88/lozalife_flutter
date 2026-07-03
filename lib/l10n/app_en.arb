@@ -1,0 +1,82 @@
+{
+  "@@locale": "en",
+  "appTitle": "LozaLife",
+  "boardsTitle": "Boards",
+  "createBoardTooltip": "Create board",
+  "noBoardsYet": "No boards yet.\nTap + to create one.",
+  "failedToLoadBoards": "Failed to load boards: {error}",
+  "@failedToLoadBoards": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "boardTaskCount": "{count, plural, =1{1 task} other{{count} tasks}}",
+  "@boardTaskCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "newBoardTitle": "New board",
+  "renameBoardTitle": "Rename board",
+  "createAction": "Create",
+  "saveAction": "Save",
+  "deleteAction": "Delete",
+  "cancelAction": "Cancel",
+  "pinAction": "Pin",
+  "unpinAction": "Unpin",
+  "renameAction": "Rename",
+  "nameLabel": "Name",
+  "deleteBoardQuestion": "Delete \"{name}\"?",
+  "@deleteBoardQuestion": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "deleteBoardWarning": "The board and all its tasks will be removed.",
+  "selectBoardHint": "Select a board or create a new one",
+  "archiveTooltip": "Archive (coming soon)",
+  "searchTasksHint": "Search tasks",
+  "noTasksFound": "No tasks found",
+  "failedToLoadColumns": "Failed to load columns: {error}",
+  "@failedToLoadColumns": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "addColumnAction": "Add column",
+  "newColumnTitle": "New column",
+  "renameColumnTitle": "Rename column",
+  "deleteColumnQuestion": "Delete \"{name}\"?",
+  "@deleteColumnQuestion": {
+    "placeholders": {
+      "name": {"type": "String"}
+    }
+  },
+  "columnContainsTasks": "{count, plural, =1{The column contains 1 task.} other{The column contains {count} tasks.}}",
+  "@columnContainsTasks": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "moveTasksAction": "Move tasks",
+  "deleteWithTasksAction": "Delete with tasks",
+  "moveTasksToTitle": "Move tasks to",
+  "addTaskAction": "Add task",
+  "newTaskTitle": "New task",
+  "titleLabel": "Title",
+  "descriptionLabel": "Description",
+  "deadlineLabel": "Deadline",
+  "columnLabel": "Column",
+  "taskScreenTitle": "Task",
+  "deleteTaskTooltip": "Delete task",
+  "failedToLoadTask": "Failed to load task: {error}",
+  "@failedToLoadTask": {
+    "placeholders": {
+      "error": {"type": "String"}
+    }
+  },
+  "taskNotFound": "Task not found",
+  "setDeadlineAction": "Set deadline",
+  "clearDeadlineTooltip": "Clear deadline",
+  "moveToBoard": "Move to board…"
+}
