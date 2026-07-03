@@ -20,7 +20,11 @@ class TaskCard extends StatelessWidget {
 
     return AppCard(
       // Full column width: no horizontal margins inside the column.
-      margin: const EdgeInsets.symmetric(vertical: AppDimens.size4),
+      margin: const EdgeInsets.symmetric(
+          vertical: AppDimens.size4,
+          horizontal: AppDimens.size8
+      ),
+
       onTap: () => context.push('/task/${task.id}'),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

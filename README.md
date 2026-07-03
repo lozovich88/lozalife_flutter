@@ -16,6 +16,12 @@ flutter run
 flutter test
 ```
 
+Превью виджетов (Flutter Widget Previews):
+
+```bash
+flutter widget-preview start
+```
+
 Целевые платформы MVP: iOS, Android, macOS. Для Web требуется дополнительная настройка Drift (sqlite3.wasm + drift_worker.js).
 
 ## Структура проекта
@@ -54,6 +60,7 @@ lib/
 - **Дизайн-система** (`core/design_system`) — все UI-элементы собраны в переиспользуемые компоненты: `AppPrimaryButton`, `AppOutlinedIconButton`, `AppTextIconButton`, `AppTextField`, `AppDropdownField`, `AppDatePickerButton`, `AppCard`, `AppDeadlineChip`, `AppSearchField`, `AppSheetLayout`/`showAppSheet`, `showAppNameSheet`, `showAppActionsSheet`, диалоги (`showAppConfirmDialog`, `showAppNameDialog`, `showAppChoiceDialog`, `showAppDecisionDialog`), состояния (`AppLoadingState`, `AppErrorState`, `AppEmptyState`). Feature-виджеты не используют «сырые» Material-компоненты для форм, шитов и диалогов.
 - **Локализация** — все строки UI вынесены в ARB-ресурсы (`lib/l10n/app_en.arb`, `app_ru.arb`), классы генерируются `flutter gen-l10n` в `lib/l10n/generated`. Поддерживаются английский и русский (включая плюрализацию счётчиков задач); доступ через `context.l10n`. Даты форматируются локализованно через `MaterialLocalizations`.
 - **Перенос задачи на другую доску** — drag&drop карточки на плитку доски в боковой панели (широкие экраны) или пункт «Переместить на доску…» на экране задачи (мобильная альтернатива). Задача попадает в первую колонку целевой доски.
+- **Превью виджетов** — для всех компонентов дизайн-системы, feature-виджетов и экранов есть `@Preview`-функции (файлы `previews.dart` рядом с виджетами). Общая аннотация `AppPreview` (`shared/previews/`) подключает тему, локализации и подменяет репозитории на in-memory фейки со статичными демо-данными, поэтому превью не требуют базы данных. Запуск: `flutter widget-preview start`.
 - **Soft delete** (`deletedAt`) — подготовка к серверной синхронизации.
 - **`core/sync`** — интерфейсы `SyncManager`, `UpdatesReceiver`, `UpdatesApplier`, `PendingOperationsRepository`, `SnapshotDownloader`, `ConnectivityObserver`, `SyncRepository`; в репозиториях отмечены точки постановки операций в очередь (TODO(sync)).
 
